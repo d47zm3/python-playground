@@ -1,0 +1,24 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+neovim = "*"
+autopep8 = "*"
+flake8 = "*"
+isort = "*"
+pep8 = "*"
+pydocstyle = "*"
+pylint = "*"
+pytest-cov = "*"
+yapf = "*"
+black = "==19.10b0"
+jedi = "*"
+
+[packages]
+sqlalchemy = "*"
+psycopg2-binary = "*"
+
+[requires]
+python_version = "3.7"

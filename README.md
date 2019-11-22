@@ -10,6 +10,9 @@ TODO: Cookie Cutter?
 # setup.py for humans
 curl -O https://raw.githubusercontent.com/navdeep-G/setup.py/master/setup.py
 
+# test setup.py
+pip install -e .
+
 # .gitignore
 curl https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore -o .gitignore
 
