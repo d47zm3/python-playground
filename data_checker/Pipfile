@@ -17,9 +17,7 @@ black = "==19.10b0"
 jedi = "*"
 
 [packages]
-sqlalchemy = "*"
-psycopg2-binary = "*"
-aiosmtpd = "*"
+scrapy = "*"
 
 [requires]
 python_version = "3.7"
