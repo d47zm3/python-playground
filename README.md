@@ -1,12 +1,16 @@
 # Python Playground
 
-Collectin Code And Best Practices
+Collecting Code And Best Practices
 
 ## Setup
 
 TODO: Cookie Cutter?
 
 ```
+# bootstrap script with things below
+
+bash <(curl -s https://d47zm3.me/python-bootstrap) # work in progress
+
 # setup.py for humans
 curl -O https://raw.githubusercontent.com/navdeep-G/setup.py/master/setup.py
 
@@ -20,14 +24,14 @@ curl https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore 
 pipenv install --python python3.7 twine --dev
 
 # this is for my neovim so it works inside pipenv
-pipenv install neovim autopep8 flake8 isort pep8 pydocstyle pylint pytest-cov yapf black==19.10b0 jedi --dev
+pipenv install neovim autopep8 flake8 isort pep8 pydocstyle pylint pytest-cov yapf black==19.10b0 jedi mypy --dev
 
 # when there's problem with dependencies
 pipenv lock --pre --clear
 ```
 
 ## Doc Tests (And Typing)
-```
+```python
 
 from typing import List, Dict
 
@@ -60,4 +64,18 @@ class Results:
 python -m doctest assault/stats.py
 ```
 
+## MyPy
 
+```python
+def greeting(name: str) -> str:
+    return 'Hello ' + name
+
+greeting(3)
+greeting("Alice")
+```
+
+```
+>>> mypy test.py
+test.py:4: error: Argument 1 to "greeting" has incompatible type "int"; expected "str"
+Found 1 error in 1 file (checked 1 source file)
+```
